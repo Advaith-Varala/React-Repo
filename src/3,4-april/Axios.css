@@ -1,0 +1,29 @@
+.products{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* margin-left: 125px; */
+    justify-content: center;
+
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    width: 250px;
+    border: 1px solid transparent;
+    padding: 10px;
+    background-color: slateblue;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 225);
+}
