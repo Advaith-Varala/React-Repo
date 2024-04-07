@@ -1,6 +1,6 @@
 import { Component } from "react";
 import axios from "axios"
-import BorderExample from "./loader";
+
 import './Axios.css'
 
 
@@ -116,25 +116,57 @@ class Products extends Component {
         
     
     }
+    lowtohigh=()=>{
+            const price=this.state.products.sort((a,b)=>(a.price-b.price))
+            this.setState({
+                products:price
+            })
+    }
+    hightolow=()=>{
+        const price=this.state.products.sort((a,b)=>(b.price-a.price))
+        this.setState({
+            products:price
+        })
+}
+    range=()=>{
+
+        // const range=this.state.products.price>=100 && this.state.products.price<=500 ?  this.state.products : "No products avaliable"
+        const prange = this.state.products.filter(products => {
+            let result= products.price >= 100 && products.price <= 1000;
+            return result
+        })
+       
+        
+        this.setState({
+            products:prange
+        })
+      
+    }
 
 
     render() {
         console.log(this.state.products)
         return (
             <>
+                
                 <h4 style={{ textAlign: "center" }}>Product Listing</h4>
+                <button onClick={this.hightolow}>Price high to low</button>
+                <button onClick={this.lowtohigh}>Price low to high</button>
+                <button onClick={this.range} >$100-$1000</button>
                 {
+                   
                     this.state.products.length > 0
                         ?
                         <div className="products">
-                            {
+                            {   
                                 this.state.products.map((eachobject, index) => {
                                     const { id, title, description, thumbnail, price } = eachobject
                                     return (
                                         <>
-
+                                       
                                             <div className="cards">
-                                                <img src={thumbnail} width={200} height={200} alt={title} />
+                                                <div><img src={thumbnail} width={200} height={200} alt={title} /></div>
+                                                
                                                 <h4>{title}</h4>
 
                                                 <p>Price : ${price}</p>
