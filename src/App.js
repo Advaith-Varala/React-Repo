@@ -8,6 +8,9 @@ import Tablecomponenet from './General_Prop';
 import { Cards, Forms, NavBar } from './1-april/css_task';
 import { Products } from './3,4-april/axios';
 import { Fruits } from './Functional-hooks/useSTATE(8-april)';
+import { UncontrolledInput } from './forms/Uncontrolledform1';
+import { ControlledForms } from './forms/controlledforms';
+import { ControlledState } from './forms/contolled_singlefunc';
 
 function App() {
   return (
@@ -23,7 +26,10 @@ function App() {
      {/* <FruitsState></FruitsState> */}
      {/* <Fruits/> */}
       {/* <Products/> */}
-      <Fruits/>
+      {/* <Fruits/> */}
+      {/* <UncontrolledInput/> */}
+      {/* <ControlledForms/> */}
+      <ControlledState/>
     </div>
   );
 }
