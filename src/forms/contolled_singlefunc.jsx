@@ -92,9 +92,9 @@ const ControlledState = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="pwd">Password:</label>
-                        <input type="password" className="form-control" id="pwd" placeholder="Password" name="Password" value={form.Password} onChange={onChangeHandler} />
-                        <div><span style={{ color: "red" }}>{Error.PasswordError}</span></div>
+                        <input type="password" className="form-control" id="pwd" placeholder="Password" name="Password" value={form.Password} onChange={onChangeHandler} />                     
                     </div>
+                    <div><span style={{ color: "red" }}>{Error.PasswordError}</span></div>
                     <div className="form-group">
                         <label htmlFor="cpwd">confirm Password:</label>
 

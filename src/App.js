@@ -11,6 +11,8 @@ import { Fruits } from './Functional-hooks/useSTATE(8-april)';
 import { UncontrolledInput } from './forms/Uncontrolledform1';
 import { ControlledForms } from './forms/controlledforms';
 import { ControlledState } from './forms/contolled_singlefunc';
+import { Axiosfetch } from './forms/axios_fetch';
+import { Emojis } from './useEffect/products';
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
       {/* <Fruits/> */}
       {/* <UncontrolledInput/> */}
       {/* <ControlledForms/> */}
-      <ControlledState/>
+      {/* <ControlledState/> */}
+      {/* <Axiosfetch/> */}
+      <Emojis/>
     </div>
   );
 }
